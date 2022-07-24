@@ -1,0 +1,41 @@
+### first step is to download visualbox from the link below so u can install ubuntu 20.04.
+
+https://www.virtualbox.org/
+
+### second step is to download ubuntu 20.04 Lts virsion and install in the visualbox
+
+https://releases.ubuntu.com/20.04/
+
+## third step is to install ros-noetic  on ubuntu by doing the following instructions in the terminal.
+
+copy and paste the following instructions in terminal
+
+$ echo "deb http://packages.ros.org/ros/ubuntu focal main" | sudo tee /etc/apt/sources.list.d/ros-focal.list
+
+$ sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+
+$ curl -sSL 'http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xC1CF6E31E6BADE8868B172B4F42ED6FBAB17C654' | sudo apt-key add -
+
+$ sudo apt update
+
+$ sudo apt install ros-noetic-desktop-full
+
+
+now we have install ros on our ubuntu but we have to complete the instructions 
+
+now we have to setup the environment for our ros
+
+$ source /opt/ros/noetic/setup.ba
+
+$ echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+
+$ tail ~/.bashrc
+
+$ source ~/.bashrc
+
+now we have finish installing ros
+
+
+
+
+

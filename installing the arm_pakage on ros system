@@ -1,0 +1,65 @@
+now after we finish installing ros on ubuntu we have to install the pakage_arm for our project
+
+and as we did with installing ros we will do with installing the pakages    < copy and paste >
+
+
+installing python 3
+
+$ sudo apt update
+
+$ sudo apt install software-properties-common
+
+$ sudo add-apt-repository ppa:deadsnakes/ppa
+
+$ sudo sudo apt install python3.9
+
+now we have install python 3 , continue 
+
+$ sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential
+
+$ sudo apt install python-rosdep
+
+$ sudo rosdep init
+
+$ rosdep update 
+
+$ sudo apt-get install ros-noetic-catkin
+
+$ mkdir -p ~/catkin_ws/src
+
+$ cd ~/catkin_ws/
+
+$ catkin_make
+
+$ cd ~/catkin_ws/sr
+
+$ cd ~/catkin_ws
+
+$ rosdep install --from-paths src --ignore-src -r -y
+
+$ sudo apt-get install ros-noetic-moveit
+
+$ sudo apt-get install ros-noetic-joint-state-publisher ros-noetic-joint-state-publisher-gui
+
+$ sudo apt-get install ros-noetic-gazebo-ros-control joint-state-publisher
+
+$ sudo apt-get install ros-noetic-ros-controllers ros-noetic-ros-control
+
+after we have install the pakage arm and before we run it we have to make we have to do one instruction to the file -bashrc and to do that we have to do the instruction 
+
+$ sudo nano ~/.bashrc
+
+and adding the instruction at the end of the file that opened.
+
+source /home/yourname/catkin_ws/devel/setup.bash
+
+eg:source /home/yazeed/catkin_ws/devel/setup.bash
+
+after that save refreshing the file by doing 
+
+$ source ~/.bashrc
+
+and finally launch the pakage 
+
+$ roslaunch robot_arm_pkg check_motors.launch
+

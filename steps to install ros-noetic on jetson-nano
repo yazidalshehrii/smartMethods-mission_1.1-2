@@ -1,0 +1,57 @@
+##  because we're using ubuntu 20.04 this year the only ros (robot operating system) that ubuntu support is neotic version so we will install neotic on the jetson nano after installing ubuntu 20.04 on it 
+
+now we will start our steps to install ros neotic
+
+first we will open terminal then we will copy and paste the following orders :
+
+$ sudo apt update
+
+1. source list :
+
+$ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+
+2. keys :
+
+$ sudo apt install curl # if you haven't already installed curl
+curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+
+$ sudo apt update
+
+3. installation desktop version :
+
+$ sudo apt install ros-noetic-desktop
+
+4. environment setup :
+
+$ source /opt/ros/noetic/setup.bash
+
+$ echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+
+$ echo "source /opt/ros/noetic/setup.zsh" >> ~/.zshrc
+source ~/.zshrc
+
+5. installing pythons 3 : 
+
+$ sudo apt install software-properties-common
+
+$ sudo add-apt-repository ppa:deadsnakes/ppa
+
+$ sudo apt update
+
+$ sudo apt install python3.8
+
+6. Initialize rosdep : 
+
+$ sudo apt update 
+
+$ sudo apt install python3-rosdep 
+
+$ sudo rosdep init
+
+$ rosdep update 
+
+$ sudo apt update 
+
+
+and by that we will have our ros noetic on our jetson-nano.

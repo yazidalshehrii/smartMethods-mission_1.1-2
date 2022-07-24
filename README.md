@@ -1,6 +1,12 @@
-# smartMethods-mission_1.1-2
+# smartMethods-mission_1.1 & 1.2 & 2
 
 
 
-installing ros noetic on ubunto 20.04 &amp; installing arm_pakage and run it
+installing ubuntu 20.04 
+
+installing ros noetic on ubuntu 20.04 
+
+installing ros noetic on jetson-nano 
+
+installing robot_arm_pakage 
 
